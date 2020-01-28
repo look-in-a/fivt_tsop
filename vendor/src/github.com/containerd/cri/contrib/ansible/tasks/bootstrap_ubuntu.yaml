@@ -1,0 +1,13 @@
+---
+- name: "Install required packages on Ubuntu"
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+      - unzip
+      - tar
+      - apt-transport-https
+      - btrfs-tools
+      - libseccomp2
+      - socat
+      - util-linux
